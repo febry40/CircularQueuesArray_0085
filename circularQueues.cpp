@@ -55,7 +55,7 @@ void remove() {
 
 void display() {
     int FRONT_position = FRONT;
-    int FRONT_position = REAR;
+    int REAR_position = REAR;
 
     if (FRONT == -1) {
         cout << "Queue is empty\n";
@@ -63,5 +63,11 @@ void display() {
     }
 
     cout << "\nElements in the queue are...\n";
-    
+
+    if (FRONT_position <= REAR_position) {
+        while (FRONT_position <= REAR_position) {
+            cout << queue_array[FRONT_position] << "  ";
+            FRONT_position++;
+        }
+    }
 }
