@@ -17,5 +17,8 @@ public:
         cin >> num;
         cout << endl;
 
-        
+        if ((FRONT == 0 && REAR == max -1) || (FRONT == REAR + 1)) {
+            cout << "\nQueues overflow\n";
+            return;
+        }
     }
