@@ -39,7 +39,7 @@ void remove() {
         cout << "Queue underflow\n";
         return;
     }
-    cout << "\nThe element deleted from the queue is: " << queue-array[FRONT] << "\n";
+    cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
     if (FRONT == REAR) {
         FRONT = -1;
@@ -69,5 +69,20 @@ void display() {
             cout << queue_array[FRONT_position] << "  ";
             FRONT_position++;
         }
+        cout << endl;
+    }
+    else {
+        while (FRONT_position <= max - 1) {
+            cout << queue_array[FRONT_position] << "  ";
+            FRONT_position++;
+        }
+
+        FRONT_position = 0;
+
+        while (FRONT_position <= REAR_position) {
+            cout << queue_array[FRONT_position] << "  ";
+            FRONT_position++;
+        }
+        cout << endl;
     }
 }
