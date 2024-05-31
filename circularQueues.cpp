@@ -40,4 +40,9 @@ void remove() {
         return;
     }
     cout << "\nThe element deleted from the queue is: " << queue-array[FRONT] << "\n";
+
+    if (FRONT == REAR) {
+        FRONT = -1;
+        REAR = -1;
+    }
 }
